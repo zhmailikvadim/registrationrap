@@ -8,9 +8,9 @@
 
                 <form:SimpleForm id='id3' class="sapUiResponsiveMargin" columnsL="1" columnsM="1" editable="true" labelSpanL="1" labelSpanM="1" layout="ResponsiveGridLayout" width="auto">
                     <form:content>
-                        <HBox id='id33' width="90%" class="sapUiResponsiveMargin" justifyContent="End" alignItems="End">
-                            <Button id="BadgedButton1" class="sapUiLargeMarginEnd" text="Войдите, если у вас уже есть учетная запись" width="100%" icon="sap-icon://action" type="Ghost" press="onButtonSapLogonPress"></Button>
-                            <Button id="BadgedButton2" class="sapUiLargeMarginEnd" text="Нажмите, если забыли пароль" width="100%" icon="sap-icon://action" type="Ghost" press="onButtonForgotPasswordPress"></Button>
+                        <HBox id='id33' width="100%" class="sapUiResponsiveMargin" direction="Column" justifyContent="End" alignItems="End">
+                            <Button id="BadgedButton1" class="sapUiLargeMarginEnd" text="Войдите, если у вас уже есть учетная запись" width="auto" icon="sap-icon://action" type="Ghost" press="onButtonSapLogonPress"></Button>
+                            <Button id="BadgedButton2" class="sapUiLargeMarginEnd" text="Нажмите, если забыли пароль" width="auto" icon="sap-icon://action" type="Ghost" press="onButtonForgotPasswordPress"></Button>
                         </HBox>
                         <Label id='com1' text="" />
                         <Text id='tom2' text="{i18n>com2}" textAlign="Begin" />
