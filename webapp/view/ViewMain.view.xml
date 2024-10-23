@@ -1,0 +1,90 @@
+<mvc:View controllerName="registrationrap.controller.ViewMain"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m">
+    <App id='id1'>
+        <Page id="page" floatingFooter="true" showHeader="false" title="Example how to use OData V2 Edm.DateTime in SAPUI5 applications">
+            <VBox id='id2' width="100%">
+
+                <form:SimpleForm id='id3' class="sapUiResponsiveMargin" columnsL="1" columnsM="1" editable="true" labelSpanL="1" labelSpanM="1" layout="ResponsiveGridLayout" width="auto">
+                    <form:content>
+                        <HBox id='id33' width="90%" class="sapUiResponsiveMargin" justifyContent="End" alignItems="End">
+                            <Button id="BadgedButton1" class="sapUiLargeMarginEnd" text="Войдите, если у вас уже есть учетная запись" width="100%" icon="sap-icon://action" type="Ghost" press="onButtonSapLogonPress"></Button>
+                            <Button id="BadgedButton2" class="sapUiLargeMarginEnd" text="Нажмите, если забыли пароль" width="100%" icon="sap-icon://action" type="Ghost" press="onButtonForgotPasswordPress"></Button>
+                        </HBox>
+                        <Label id='com1' text="" />
+                        <Text id='tom2' text="{i18n>com2}" textAlign="Begin" />
+                        <Label id='com35' text="" />
+                        <Link id='link2' text="https://hr.belorusneft.by/career " href="https://hr.belorusneft.by/career" target = "_blank" />
+                        <Label id='com3' text="" />
+                        <Text id='tom3' text="{i18n>com3}"/>                       
+                        <Label id='com4' text="" />
+                        <Text id='tom4' text="{i18n>com4}" textAlign="Begin" />
+                        <Label id='lab10' text="" />
+                        <Text id='txt10' text="ФИО" textAlign="Begin" class="TextStyle" />
+                        <Label id='lab3' text="Фамилия" required="true"/>
+                        <Input id='nachn' width = "60%"/>
+                        <Label id='lab1' text="Имя" required="true"/>
+                        <Input id='vorna'  width = "60%" />
+                        <Label id='lab2' text="Отчество" />
+                        <Input id='nachn2'  width = "60%"/>
+
+                        <Label id='lab4' text="Табельный номер" />
+                        <Input id='tabel' value="00000000"   width = "30%" />
+                        <Label id='lab6' text="" />
+                        <Text id='txt1' text="{i18n>pernr}" />
+                        <Label id='lab7' text="" />
+                        <Text id='txt2' text="{i18n>text1}" />
+                        <Label id='lab8' text="" />
+                        <Text id='txt3' text="{i18n>text3}" />
+                        <Label id='lab88' text="" />
+
+                        <Input id='factory' showValueHelp="true" valueHelpRequest=".onInputFactoryValueHelpRequest" />
+                        <Input id='factoryid' showValueHelp="true" binding = "{/ZHR_C_CANDIDATE_REGS}" value = "{/factory_numc}" visible="false" />
+                        <Label id='lab888' text="" />
+                        <Text id='txt99' text="{i18n>factory}" />
+                        <Label id='lab99' text="" />
+                    </form:content>
+                </form:SimpleForm>
+                <form:SimpleForm id='id4' class="sapUiResponsiveMargin" columnsL="1" columnsM="1" editable="true" labelSpanL="1" labelSpanM="1" layout="ColumnLayout" width="auto">
+                    <form:content>
+                        <Label id='lab11' text="" />
+                        <Text id='txt4' text="{i18n>data_pers}" textAlign="Begin" class="TextStyle" />
+                        <Label id='lab9' text="{i18n>text5}" required="true"/>
+                        <Input id='login' value=""  width = "60%"/>
+                        <Label id='lab12' text=" "/>
+                        <Text id='txt12' text="{i18n>text6}" textAlign="Begin" class="col" />
+                        <Label id='lab13' text="{i18n>password}" required="true"/>
+                        <Input id='password' value=""  width = "60%"/>
+                        <Label id='lab14' text="{i18n>repeat_password}" required="true"/>
+                        <Input id='repeat_password' value=""  width = "60%"/>
+                        <Label id='lab15' text="{i18n>mail}" required="true"/>
+                        <Input id='mail' value=""  width = "60%"/>
+                        <Label id='lab16' text=" "/>
+                        <Text id='txt16' text="{i18n>help_mail}" textAlign="Begin" class="col" />
+                        <Label id='lab17' text="{i18n>repeat_mail}" required="true"/>
+                        <Input id='repeat_mail' value=""  width = "60%"/>
+                    </form:content>
+                </form:SimpleForm>
+                <form:SimpleForm id='fid4' class="sapUiResponsiveMargin" columnsL="1" columnsM="1" editable="true" labelSpanL="1" labelSpanM="1" layout="ResponsiveGridLayout" width="auto">
+                    <form:content>
+                        <Label id='lab20' text="" />
+                        <Text id='txt20' text="{i18n>agree}" textAlign="Begin" class="TextStyle" />
+                        <Label id='lab21' text="" />
+                        <Text id='txt21' text="{i18n>agree_yes}" textAlign="Begin" />
+                        <Label id='lab22' text="" />
+                        <Text id='txt22' text="{i18n>comment}" textAlign="Begin" class="col" />
+                        <Label id='lab23' text="" />
+                        <Link id='link1' text="{i18n>agree}" href="https://belsap.com/sogl.pdf" target = "_blank"/>
+                        <Label id='lab24' text="" />
+                        <Text id='txt24' text="{i18n>garant}" textAlign="Begin" />
+                        <Label id='lab25' text="" />
+                        <CheckBox id='ch1' text="{i18n>check}" select="onCheckBoxSuccessSelect" />
+                        <Label id='lab26' text="" />
+                        <Button id="idBadgedButton" text="Зарегистрировать" class="but_regis" width="50%" enabled="{viewModel>/bEnableUpdate}" press="onButtonRegistrationPress"></Button>
+                    </form:content>
+                </form:SimpleForm>
+            </VBox>
+        </Page>
+    </App>
+</mvc:View>
